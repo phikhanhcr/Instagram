@@ -1,0 +1,39 @@
+.Header {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.Header .wrapper-header {
+
+  display: flex;
+  width: 953px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header .wrapper-header input {
+  height: 28px;
+  width: 218px;
+  padding-left: 17px;
+  opacity: 0.7;
+}
+
+.wrapper-header .icon {
+  display: flex;
+}
+
+.wrapper-header .icon img {
+  width: 25px;
+  height: 25px;
+  margin-left: 15px;
+}
+
+.wrapper-header .icon .avatar {
+  border-radius: 50%;
+}
