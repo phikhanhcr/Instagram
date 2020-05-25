@@ -30,7 +30,7 @@ class RecommendFriends extends PureComponent {
         </div>
         {
           data.length && data.map((ele , index) => (
-            <FindFriends item={ele}/>
+            <FindFriends item={ele} key={index}/>
           ))
         }
       </div>

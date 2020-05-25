@@ -162,8 +162,16 @@
     height: 30px;
     width: 30px;
     margin-left: 15px;
+    transition: all 0.2s;
   }
-  
+  .Timeline .Action .droTym:hover {
+    width: 32px;
+    height: 32px;
+  }
+  .Timeline .Action .droTym.liked {
+    background-color: #ed4956;
+  }
+
   .Timeline .Action .ogikobiet {
     margin-right: 15px;
   }
@@ -187,6 +195,9 @@
 
   .Timeline .des {
     margin-left: 15px;
+  }
+  .Timeline .des-add.display {
+    display: none;
   }
 
   .Timeline .des a {
@@ -300,15 +311,119 @@
   .Left .wrapper-left a {
     text-decoration: none;
   }
+
+  .DisplayNews {
+    display: none;
+    color: white;
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: #524c4c;
+    z-index: 1;
+  }
+
+  .DisplayNews.active {
+    display: flex;
+  }
+
+  .DisplayNews p {
+    margin: 0;
+  }
+
+  .DisplayNews .wrapper-news {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
+
+  .DisplayNews .wrapper-news .infor img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .DisplayNews .wrapper-news .infor .user {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .DisplayNews .wrapper-news .infor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .DisplayNews .wrapper-news .infor .wrapper-infor {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 10px;
+  }
+
+  .DisplayNews .wrapper-news .story {
+    width: 400px;
+    height: auto;
+  }
+  /* Upload */
+  .Upload {
+   background-color: #fff;
+   margin-bottom: 15px;
+   padding-top: 10px;
+  }
+  .Upload .second {
+    display: flex;
+    flex-direction: column;
+  }
+  .Upload .wrapper-upload {
+    margin-left: 15px;
+  }
+  .Upload .second input {
+    width: 100%;
+    height: 50px;
+    border:  none;
+    padding-left: 30px;
+    margin-bottom: 10px;
+  }
+  .Upload .second input:focus {
+    outline: none;
+  }
+  .Upload button {
+    width: 97%;
+    margin-bottom: 15px;
+  }
+
 </style>
 
 <body>
+
+  <div class="DisplayNews">
+    <div class="wrapper-news">
+      <div class="infor">
+        <div class="wrapper-infor">
+          <img class="user" src="https://cdn.hyperdev.com/click-me.svg?v=1477239469954" alt="img" />
+          <p>mn.png</p>
+        </div>
+        <a href="#">
+          <img class="delete"
+            src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fmore.png?v=1590153008167" alt="more" />
+        </a>
+      </div>
+      <a href="#">
+        <img class="story" src="https://cdn.hyperdev.com/click-me.svg?v=1477239469954" alt="img" />
+      </a>
+    </div>
+  </div>
+
   <div class="Header">
     <div class="container">
       <div class="wrapper-header">
         <a href="#">
-          <img src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fhi.png?v=1590147338026" alt="instagram" />
-          </a>
+          <img src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fhi.png?v=1590147338026"
+            alt="instagram" />
+        </a>
         <input type="text" placeholder="Search">
         <div class="icon">
           <a href="#">
@@ -338,10 +453,27 @@
 
     </div>
   </div>
+
   <div class="Main">
     <div class="wrapper-main">
       <div class="Right">
+        <div class="Upload">
+          <div class="wrapper-upload">
+            <div class="first">
+              <h3>Create a new Post</h3>
+            </div>
+            <div class="second">
+              <img src="" alt="">
+              <input type="text" placeholder="What's up , bro ? ">
+              <input type="file">
+            </div>
+            <div>
+              <button class="btn btn-primary">Post</button>
+            </div>
+          </div>
+        </div>
         <div class="new">
+
           <div class="EachNews">
             <a href="#">
               <img class="img" src="https://cdn.hyperdev.com/click-me.svg?v=1477239469954" alt="news">
@@ -405,7 +537,7 @@
           <div class="Action">
             <div class="wrapper-icon">
               <a href="#">
-                <img src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fheart.png?v=1590148496701"
+                <img class="droTym" src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fheart.png?v=1590148496701"
                   alt="tym">
               </a>
               <a href="">
@@ -446,8 +578,11 @@
             <a href="#"><b>mn.png_ #copy</b></a>
             <a href="#"> ... thêm</a>
             <p>22 hours ago</p>
+            <div class="des-add">
+              anh cop day dm
+            </div>
           </div>
-
+          
           <div class="AddComment">
             <input type="text" placeholder="Add Comment">
             <a href="#">Post</a>

@@ -1,6 +1,25 @@
 import React, { PureComponent } from 'react';
 class Friends extends PureComponent {
-  state = {}
+  constructor(props){
+    super(props)
+    this.state = {
+      displayFollow : false
+    }
+  }
+  
+  changeStateFollow = () => {
+    this.setState({
+      displayFollow : !this.state.displayFollow
+    })
+  }
+
+  displayFollow = () => {
+    if(this.state.displayFollow) {
+      return <a href="#" onClick={this.changeStateFollow}>Unfollow</a>
+    } else {
+      return <a href="#" onClick={this.changeStateFollow}>Follow</a>
+    }
+  }
   render() {
     const { item } = this.props;
     return (
@@ -17,7 +36,9 @@ class Friends extends PureComponent {
           </div>
         </div>
         <div className="follow">
-          <a href="#">Follow</a>
+          {
+            this.displayFollow()
+          }
         </div>
       </div>
     );
