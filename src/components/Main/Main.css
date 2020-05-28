@@ -193,9 +193,7 @@
     width: 80%;
   }
 
-  .Left .wrapper-left .me {
-    margin-bottom: 15px;
-  }
+
 
   .Left .wrapper-left .me a {
     color: black;
@@ -210,7 +208,11 @@
   .Left .wrapper-left .me {
     display: flex;
     align-items: center;
-    width: 80%;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .Left .wrapper-left .me div {
+    flex-grow: 1;
   }
 
   .Left .wrapper-left .me img {

@@ -12,6 +12,7 @@ class Left extends PureComponent {
               <a href="#"><b>phikhanhcr</b></a>
               <p>Phi Khanh Cr</p>
             </div>
+            <a href="/login" onClick={() => { localStorage.removeItem('token')}} className="btn btn-light">Log Out</a>
           </div>
           <RecommendFriends />
         </div>

@@ -27,21 +27,17 @@ export default function MyUploader() {
 
   const postStatus = async () => {
    
-    // var newPost = {
-    //   "avatar": "https://instagram.fhan2-3.fna.fbcdn.net/v/t51.2885-15/e35/98274338_318501435800155_6640321408878702086_n.jpg?_nc_ht=instagram.fhan2-3.fna.fbcdn.net&_nc_cat=107&_nc_ohc=ISaDRsc6Z48AX8T4XC8&oh=c9dee2c223f0ec9cac11cc66fd11e86d&oe=5EF078DD",
-    //   "img" : `"${image}"` ,
-    // }
-    // axios.post(`http://localhost:3001/api/post`, { 
-    //   avatar : "https://instagram.fhan2-3.fna.fbcdn.net/v/t51.2885-15/e35/98274338_318501435800155_6640321408878702086_n.jpg?_nc_ht=instagram.fhan2-3.fna.fbcdn.net&_nc_cat=107&_nc_ohc=ISaDRsc6Z48AX8T4XC8&oh=c9dee2c223f0ec9cac11cc66fd11e86d&oe=5EF078DD" , 
-    //   img : image
-    //  })
-    // .then(res => {
-    //   console.log(res)
-    //   console.log(res.data);
-      
-    // }).catch(err => {
-    //   console.log(err)
-    // })
+    var newPost = {
+      avatar: "https://instagram.fhan2-3.fna.fbcdn.net/v/t51.2885-15/e35/98274338_318501435800155_6640321408878702086_n.jpg?_nc_ht=instagram.fhan2-3.fna.fbcdn.net&_nc_cat=107&_nc_ohc=ISaDRsc6Z48AX8T4XC8&oh=c9dee2c223f0ec9cac11cc66fd11e86d&oe=5EF078DD",
+      img : image 
+    }
+    axios.post(`http://localhost:3001/api/post`, {newPost})
+    .then(res => {
+      console.log(res)
+      console.log(res.data);
+    }).catch(err => {
+      console.log(err)
+    })
   }
 
   return (
@@ -72,10 +68,6 @@ export default function MyUploader() {
         </div>
       </div>
     </div>
-
-
-
-
 
   );
 

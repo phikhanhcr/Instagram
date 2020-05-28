@@ -31,9 +31,9 @@ class Right extends PureComponent {
       })
       .catch(err => {
         console.log(err)
-      })
-    
+      }) 
   }
+  
   render() {
     const { data } = this.state;
     console.log(data)

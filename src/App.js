@@ -1,46 +1,26 @@
 import React, { Component } from 'react';
-import './App.css';
-
-import Header from './components/Header/Header';
-import Left from './components/Main/Left/Left';
-import Right from './components/Main/Right/Right';
-import DisplayNews from './components/Main/Right/New/DisplayNew'
+import Instagram from './Intagram'
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
+import Login from './components/Login/Login';
+import SignIn from './components/Login/SignIn'
 class App extends Component {
-  constructor() {
-    super();
 
-    this.state = {
-      displayNew: false 
-    }
-  }
-
-  displayNews = () => {
-    this.setState({
-      displayNew: true
-    })
-  }
-
-  changeDisplay = () => {
-    this.setState({
-      displayNew: false 
-    })
-
-  }
   render() {
-    const { displayNew } = this.state;
     return (
-      <div className="App">
-        <DisplayNews state={displayNew} changeDisplay={this.changeDisplay} />
-        <Header />
-        <div className="Main">
-          <div className="wrapper-main">
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Instagram />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/signin">
+            <SignIn/>
+          </Route>
+        </Switch>
+      </Router>
 
-            <Right displayNew={this.displayNews} />
-            <Left />
-          </div>
-        </div>
-
-      </div>
     )
   }
 }
