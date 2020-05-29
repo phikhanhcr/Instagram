@@ -118,9 +118,9 @@ class SignIn extends PureComponent {
                 value={email} onChange={this.onChange} required />
               <input type="text" placeholder="Username" name="name"
                 value={name} onChange={this.onChange} required />
-              <input type="pass" placeholder="Password" name="pass"
+              <input type="password" placeholder="Password" name="pass"
                 value={pass} onChange={this.onChange} required />
-              <input type="pass" placeholder="Password Again" name="pass2"
+              <input type="password" placeholder="Password Again" name="pass2"
                 value={pass2} onChange={this.onChange} required />
               <button className="btn btn-primary">Sign In</button>
             </form>

@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import axios from 'axios'
+import { Redirect } from 'react-router-dom'
 class Forgot extends PureComponent {
   constructor(props) {
     super(props)
@@ -10,7 +11,8 @@ class Forgot extends PureComponent {
       pass2: '',
       checkMail: false,
       checkUserName: false,
-      checkPass: false
+      checkPass: false,
+      checkEdit : false
     }
     this.onChange = this.onChange.bind(this);
   }
@@ -63,6 +65,9 @@ class Forgot extends PureComponent {
           .then(res => {
             console.log(res)
             console.log(res.data)
+            this.setState({
+              checkEdit : true
+            })
           }).catch(err => {
             console.log("Loi r em oi " + err)
           })
@@ -70,7 +75,7 @@ class Forgot extends PureComponent {
   }
 
   render() {
-    const { email, name, pass, pass2, checkMail, checkUserName, checkPass } = this.state;
+    const { email, name, pass, pass2, checkMail, checkUserName, checkPass , checkEdit } = this.state;
     let className = "alert alert-warning display";
     let className1 = "alert alert-warning display";
     let className2 = "alert alert-warning display";
@@ -82,6 +87,9 @@ class Forgot extends PureComponent {
     }
     if (checkPass) {
       className2 = "alert alert-warning"
+    }
+    if(checkEdit) {
+      return <Redirect to="/login"/>
     }
     return (
       <div className="Login">
@@ -103,11 +111,11 @@ class Forgot extends PureComponent {
                 value={email} onChange={this.onChange} required />
               <input type="text" placeholder="Username" name="name"
                 value={name} onChange={this.onChange} required />
-              <input type="pass" placeholder="Password" name="pass"
+              <input type="password" placeholder="Password" name="pass"
                 value={pass} onChange={this.onChange} required />
-              <input type="pass" placeholder="Password Again" name="pass2"
+              <input type="password" placeholder="Password Again" name="pass2"
                 value={pass2} onChange={this.onChange} required />
-              <button className="btn btn-primary">OKE</button>
+              <button className="btn btn-primary">You are stupid  ^_^ </button>
             </form>
 
           </div>

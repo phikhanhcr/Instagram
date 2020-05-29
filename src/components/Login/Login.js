@@ -108,7 +108,7 @@ class Login extends PureComponent {
 
                 onChange={this.onChange}
                 required />
-              <input type="submit" className="btn btn-primary" />
+              <button className="btn btn-primary">Log In</button>
             </form>
             <p>Or</p>
             <div>
