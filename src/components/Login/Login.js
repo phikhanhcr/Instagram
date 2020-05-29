@@ -68,7 +68,15 @@ class Login extends PureComponent {
   }
 
   render() {
-    const { username, password, loggedIn } = this.state;
+    const { username, password, loggedIn, checkUser , checkPass } = this.state;
+    let classNameUser = 'alert alert-warning display';
+    let classNamePass = 'alert alert-warning display';
+    if(checkUser) {
+      classNameUser = 'alert alert-warning';
+    }
+    if(checkPass){
+      classNamePass = 'alert alert-warning';
+    }
     if (loggedIn) {
       return <Redirect to="/" />
     }
@@ -77,6 +85,12 @@ class Login extends PureComponent {
         <div className="wrapper-login">
           <div className="child-login">
             <h1>Instagram</h1>
+            <div className={classNameUser} role="alert">
+              Username doesn't exists !!!
+            </div>
+            <div className={classNamePass} role="alert">
+              Oop, Wrong Password !!!
+            </div>
             <form onSubmit={this.onSubmit}>
               <input
                 type="text"
@@ -98,7 +112,7 @@ class Login extends PureComponent {
             </form>
             <p>Or</p>
             <div>
-              <a href="#">
+              <a href="/login/forgot">
                 Forgot your password
             </a>
             </div>
