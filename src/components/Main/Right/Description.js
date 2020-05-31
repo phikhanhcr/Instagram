@@ -1,39 +1,40 @@
 import React, { PureComponent } from 'react';
 import classNames from 'classnames';
 class Des extends PureComponent {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      displayDes : false
+      displayDes: false
     }
   }
   displayDes = () => {
     this.setState({
-      displayDes : !this.state.displayDes 
+      displayDes: !this.state.displayDes
     })
   }
   displayAdd = () => {
-    if(this.state.displayDes) {
+    if (this.state.displayDes) {
       return <a onClick={this.displayDes}> ... ẩn bớt</a>
     } else {
       return <a onClick={this.displayDes}> ... thêm</a>
     }
   }
   render() {
+    const { description } = this.props;
     const { displayDes } = this.state;
     let className = "des-add";
-    if(displayDes) {
-      className = classNames(className , "display")
+    if (displayDes) {
+      className = classNames(className, "display")
     }
     return (
       <div className="Des">
-        <a href="#"><b>mn.png_ #copy</b></a>
-       {
-         this.displayAdd()
-       }
+        <a href="#"><b>mn.png</b></a>
+        {
+          this.displayAdd()
+        }
         <p>22 hours ago</p>
         <div className={className}>
-          anh cop day dm
+          {description}
         </div>
       </div>
     );

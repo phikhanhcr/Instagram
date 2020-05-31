@@ -8,7 +8,7 @@ class Header extends PureComponent {
       <div className="Header">
         <div className="container">
           <div className="wrapper-header">
-            <a href="#">
+            <a href="/">
             <img src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fhi.png?v=1590147338026" alt="instagram" />
             </a>
             

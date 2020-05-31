@@ -34,7 +34,6 @@ class Login extends PureComponent {
     axios.get('http://localhost:3001/api/user')
       .then(res => {
         let data = res.data;
-        console.log(data);
 
         let checkUserName = data.filter(ele => {
           return ele.username === username
@@ -55,9 +54,10 @@ class Login extends PureComponent {
           })
           return;
         }
-
         // everything is oke
-        localStorage.setItem("token", "ahihivaodcr")
+        console.log(checkPassword[0].username)
+        localStorage.setItem("token", checkPassword[0].username)
+        console.log(localStorage.getItem('token'))
         this.setState({
           loggedIn: true
         })

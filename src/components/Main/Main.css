@@ -101,6 +101,7 @@
   .Timeline .imgUpload {
     width: 100%;
     height: auto;
+    margin-bottom: 10px;
   }
 
   .Timeline .Action {
@@ -124,6 +125,27 @@
   .Timeline .Action .ogikobiet {
     margin-right: 15px;
   }
+
+  .Timeline .Comment {
+    margin-left: 15px;
+    
+  }
+  .Timeline .Comment .wrapperEachComment {
+    display: flex;
+  }
+  .Timeline .Comment .p{
+    width: 150px;
+    color: #123d9b;
+  }
+  .Timeline .Comment .wrapperEachComment.display {
+    display: none;
+  }
+  .Timeline .Comment .wrapperEachComment a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #123d9b;
+  }
+
 
   .Timeline .Wholike {
     display: flex;
