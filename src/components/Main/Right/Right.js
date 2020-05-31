@@ -11,7 +11,8 @@ class Right extends PureComponent {
     super(props);
     this.state = {
       data: [],
-      username: []
+      username: [],
+      followFriends: []
     }
   }
   componentDidMount() {

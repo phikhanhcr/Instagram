@@ -25,11 +25,11 @@ class Friends extends PureComponent {
     return (
       <div className="FindFriends">
         <a href="#">
-          <img src={item.img} alt="someone" />
+          <img src={item.avatar} alt="img" />
         </a>
         <div className="information">
           <div className="name">
-            <a href="#"><b>{item.user}</b></a>
+            <a href="#"><b>{item.username}</b></a>
           </div>
           <div className="someinfor">
             Instagram recommend
