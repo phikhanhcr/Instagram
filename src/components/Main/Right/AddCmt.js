@@ -57,7 +57,7 @@ class AddComment extends PureComponent {
       <div className="AddComment">
         <form onSubmit={this.onSubmit}>
           <input type="text" placeholder="Add Comment" onChange={this.onChange} />
-          <input type="submit" value="Post" />
+          <input type="submit" className="btn btn-light" value="Post" />
         </form>
       </div>
     );

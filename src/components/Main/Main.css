@@ -183,7 +183,12 @@
   .Timeline .des-add.display {
     display: inline;
   }
-  .Timeline .AddComment input {
+  .Timeline .AddComment form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .Timeline .AddComment input:first-child {
     border: none;
     flex-grow: 8;
     height: 35px;
