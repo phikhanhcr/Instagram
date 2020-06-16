@@ -16,8 +16,6 @@ class NewFeed extends PureComponent {
     this.doubleClick = this.doubleClick.bind(this);
   }
 
-
-
   unLike = () => {
     this.setState({
       liked: !this.state.liked

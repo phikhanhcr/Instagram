@@ -15,8 +15,8 @@ class Right extends PureComponent {
       followFriends: []
     }
   }
-  componentDidMount() {
 
+  componentDidMount() {
     // const data = fetch('http://localhost:3001/api/post')
     // console.log(data.json)
     axios.get('http://localhost:3001/api/post', //proxy uri
@@ -30,6 +30,7 @@ class Right extends PureComponent {
         this.setState({
           data: response.data
         })
+        console.log("Change state")
         let data = response.data;
 
         let idAuthor = data.map(ele => {
@@ -39,7 +40,6 @@ class Right extends PureComponent {
           .then(res => {
             console.log(res.data)
             let author = [];
-
             for (let i = 0; i < idAuthor.length; i++) {
               for (let j = 0; j < res.data.length; j++) {
                 if (idAuthor[i] === res.data[j]._id) {
@@ -50,7 +50,6 @@ class Right extends PureComponent {
             this.setState({
               username: author
             })
-
 
           }).catch(err => {
             console.log(err)

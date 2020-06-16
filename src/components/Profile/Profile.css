@@ -1,0 +1,94 @@
+.EditProfile {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin: 50px 0;
+}
+
+.EditProfile .avatar {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.EditProfile .wrapper-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.EditProfile .wrapper-profile img {
+  width: 20px;
+  height: 20px;
+}
+
+.EditProfile .wrapper-profile .first {
+  display: flex;
+  width: 331px;
+  align-items: center;
+
+}
+
+.EditProfile .wrapper-profile .first .name {
+  font-size: 30px;
+  flex-grow: 1;
+}
+
+.EditProfile .wrapper-profile .first img {
+  margin-left: 10px;
+}
+
+.EditProfile .wrapper-profile .second {
+  display: flex;
+  width: 331px;
+  justify-content: space-between;
+  align-Profileitems: center;
+}
+.Profile .container {
+  display: flex;
+  flex-direction: column;
+}
+.Profile .post .wrapper-post {
+  height: 340px;
+  width: 340px;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Profile .post .wrapper-post .hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 340px;
+  width: 340px;
+  display: none;
+}
+.Profile .post .wrapper-post .hover img {
+  width: 25px;
+  height: 25px;
+  margin-left: 15px;
+}
+.Profile .post .wrapper-post .hover p {
+  margin: 0;
+  color: white;
+  font-size: 26px;
+  margin-left: 5px;
+}
+.Profile .post .wrapper-post .hover div {
+  display: flex;
+  align-items: center;
+  }
+.Profile .post .wrapper-post:hover .hover {
+  display: flex;
+  justify-content: center;
+align-items: center;
+}
+.Profile .post .Wrapper-row {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+.Profile .post .Wrapper-row .row {
+  width: 80%;
+}

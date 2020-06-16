@@ -37,3 +37,40 @@
 .wrapper-header .icon .avatar {
   border-radius: 50%;
 }
+
+.wrapper-header .icon .notification {
+  position: relative;
+}
+
+.wrapper-header .icon .notification:hover .Dropdown{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper-header .icon .notification .Dropdown {
+  display: none;
+  color: black
+}
+.wrapper-header .icon .notification .Dropdown {
+  list-style-type: none;
+  height: auto;
+  background-color: #eee; 
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.wrapper-header .icon .notification .Dropdown li a {
+  text-decoration: none;
+}
+.wrapper-header .icon .notification .each-notifi {
+  margin-top: 10px;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.wrapper-header .icon .notification .each-notifi img {
+  border-radius: 50%;
+  margin-right: 15px;
+}

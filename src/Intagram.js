@@ -6,6 +6,9 @@ import Header from './components/Header/Header';
 import Left from './components/Main/Left/Left';
 import Right from './components/Main/Right/Right';
 import DisplayNews from './components/Main/Right/New/DisplayNew'
+import ReactNotificationsComponent from 'react-notifications-component';
+
+//import { subscribeToTimer } from './api';
 
 
 class App extends Component {
@@ -37,6 +40,9 @@ class App extends Component {
       displayNew: false
     })
 
+    // subscribeToTimer((err, timestamp) => this.setState({
+    //   timestamp
+    // }));
   }
   render() {
     const { displayNew, loggedIn } = this.state;
@@ -45,6 +51,7 @@ class App extends Component {
     }
     return (
       <div className="App">
+        <ReactNotificationsComponent />
         <DisplayNews state={displayNew} changeDisplay={this.changeDisplay} />
         <Header />
         <div className="Main">
@@ -54,7 +61,7 @@ class App extends Component {
             <Left />
           </div>
         </div>
-
+       
       </div>
     )
   }

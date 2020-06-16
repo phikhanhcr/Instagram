@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import './Header.css';
+import Notification from './Notification/Notification';
 
 class Header extends PureComponent {
   render() {
@@ -14,7 +15,7 @@ class Header extends PureComponent {
             
             <input type="text" placeholder="Search" />
             <div className="icon">
-              <a href="#">
+              <a href="/">
                 <img src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fbrowser.png?v=1590147652762" alt="home" />
               </a>
               <a href="#">
@@ -23,10 +24,13 @@ class Header extends PureComponent {
               <a href="#">
                 <img src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fcompass.png?v=1590148518875" alt="home" />
               </a>
-              <a href="#">
-                <img src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fheart.png?v=1590148496701" alt="home" />
+              
+              <a href="#" className="notification">
+                <img src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fheart.png?v=1590148496701" alt="notification" />
+                <Notification />
               </a>
-              <a href="#">
+              
+              <a href="/profile">
                 <img className="avatar" src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/73244435_2997608627131456_2957342681333760000_n.jpg?_nc_cat=108&_nc_sid=85a577&_nc_ohc=5U53gYmzXVoAX-MOTT3&_nc_ht=scontent.fhan2-3.fna&oh=1755644c07fb47f26d8a70aad09046f4&oe=5EEEBDBC" alt="home" />
               </a>
             </div>

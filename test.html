@@ -7,647 +7,148 @@
   <title>Document</title>
 </head>
 <style>
-  body {
-    background-color: #eee;
+  .EditProfile {
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    margin: 50px 0;
   }
 
-  .Header {
-    background-color: #fff;
-    position: sticky;
-    top: 0;
+  .EditProfile .avatar {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
   }
 
-  .container {
+  .EditProfile .wrapper-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .EditProfile .wrapper-profile img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .EditProfile .wrapper-profile .first {
+    display: flex;
+    width: 331px;
+    align-items: center;
+
+  }
+
+  .EditProfile .wrapper-profile .first .name {
+    font-size: 30px;
+    flex-grow: 1;
+  }
+
+  .EditProfile .wrapper-profile .first img {
+    margin-left: 10px;
+  }
+
+  .EditProfile .wrapper-profile .second {
+    display: flex;
+    width: 331px;
+    justify-content: space-between;
+    align-Profileitems: center;
+  }
+
+  .Profile .post .wrapper-post {
+    height: 370px;
+    width: 370px;
+    background-image: url('https://instagram.fhan2-1.fna.fbcdn.net/v/t51.2885-19/s320x320/72481773_538572816986102_3710814270154342400_n.jpg?_nc_ht=instagram.fhan2-1.fna.fbcdn.net&_nc_ohc=_eMb7uRe9YcAX_1rxLE&oh=5d44243ec8ace28acb449eb15cbf7cec&oe=5EFEB073');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 15px;
     display: flex;
     justify-content: center;
-  }
-
-  .Header .wrapper-header {
-
-    display: flex;
-    width: 953px;
-    justify-content: space-between;
     align-items: center;
   }
 
-  .Header .wrapper-header input {
-    height: 28px;
-    width: 218px;
-    padding-left: 17px;
-    opacity: 0.7;
+  .Profile .post .wrapper-post .hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 320px;
+    width: 320px;
+    display: none;
   }
 
-  .wrapper-header .icon {
-    display: flex;
-  }
-
-  .wrapper-header .icon img {
+  .Profile .post .wrapper-post .hover img {
     width: 25px;
     height: 25px;
     margin-left: 15px;
   }
 
-  .wrapper-header .icon .avatar {
-    border-radius: 50%;
-  }
-
-  /* Main */
-  .Main {
-    height: auto;
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-  }
-
-  .Main .wrapper-main {
-    display: flex;
-    width: 953px;
-
-    height: auto;
-  }
-
-  .Main .wrapper-main .Right {
-    width: 620px;
-    background-color: #eee;
-    height: 100%;
-  }
-
-  .Main .wrapper-main .Right .new {
-    width: 100%;
-    height: 115px;
-    background-color: #fff;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-  }
-
-  .Main .wrapper-main .Right .Timeline {
-    margin-top: 5px;
-    background-color: #fff;
-    height: auto;
-    margin-bottom: 30px;
-  }
-
-  .Right .new {
-    display: flex;
-    align-items: center;
-  }
-
-  .Right .new .EachNews {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 20px;
-  }
-
-  .Right .new .EachNews .img {
-    height: 65px;
-    width: 65px;
-    border-radius: 50%;
-    border: 2px solid red;
-  }
-
-  .Right .new .EachNews .img.seen {
-    border: 2px solid #eee;
-  }
-
-  .Right .new .EachNews p {
+  .Profile .post .wrapper-post .hover p {
     margin: 0;
-  }
-
-  /* newfeed */
-
-  .Main .wrapper-main .Right .Timeline {
-    width: 100%;
-  }
-
-  .Timeline .person p {
-    margin: 0 0 0 10px;
-  }
-
-  .Timeline .person .more {
-    width: 15px;
-    height: 15px;
-    margin-right: 15px;
-  }
-
-  .Timeline .person {
-    height: 60px;
-    margin-left: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .Timeline .person .infor {
-    display: flex;
-  }
-
-  .Timeline .person .infor img {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-  }
-
-  .Timeline .imgUpload {
-    width: 100%;
-    height: auto;
-  }
-
-  .Timeline .Action {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .Timeline .Action img {
-    height: 30px;
-    width: 30px;
-    margin-left: 15px;
-    transition: all 0.2s;
-  }
-  .Timeline .Action .droTym:hover {
-    width: 32px;
-    height: 32px;
-  }
-  .Timeline .Action .droTym.liked {
-    background-color: #ed4956;
-  }
-
-  .Timeline .Action .ogikobiet {
-    margin-right: 15px;
-  }
-
-  .Timeline .Wholike {
-    display: flex;
-    margin-left: 15px;
-    margin-top: 10px;
-  }
-
-  .Timeline .Wholike img {
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-  }
-
-  .Timeline .Wholike a {
-    color: black;
-    text-decoration: none;
-  }
-
-  .Timeline .des {
-    margin-left: 15px;
-  }
-  .Timeline .des-add.display {
-    display: none;
-  }
-
-  .Timeline .des a {
-    color: black;
-    text-decoration: none;
-  }
-
-  .Timeline .des p {
-    margin-top: 5px;
-    opacity: 0.7;
-  }
-
-  .Timeline .AddComment input {
-    border: none;
-    flex-grow: 8;
-    height: 35px;
-    padding-left: 10px;
-  }
-
-  .Timeline .AddComment input:focus {
-    outline: none;
-  }
-
-  .Timeline .AddComment {
-    height: 75px;
-    display: flex;
-    align-items: center;
-    margin: 0 15px;
-    border-top: 1px solid #eee;
-  }
-
-  /* left */
-  .Left {
-    width: 333px;
-    background-color: #eee;
-    display: flex;
-    justify-content: center;
-  }
-
-  .Left .wrapper-left {
-    margin-top: 23px;
-    width: 80%;
-  }
-
-  .Left .wrapper-left .me {
-    margin-bottom: 15px;
-  }
-
-  .Left .wrapper-left .me a {
-    color: black;
-    text-decoration: none;
-  }
-
-  .Left .wrapper-left .me p {
-    margin: 0;
-    opacity: 0.6;
-  }
-
-  .Left .wrapper-left .me {
-    display: flex;
-    align-items: center;
-    width: 80%;
-  }
-
-  .Left .wrapper-left .me img {
-    width: 60px;
-    height: 60px;
-    margin-right: 15px;
-    border-radius: 50%;
-  }
-
-  .Left p {
-    margin: 0;
-  }
-
-  .Left .wrapper-left .Recommend {
-    width: 100%;
-    display: flex;
-    margin-bottom: 15px;
-    justify-content: space-between;
-  }
-
-  .Left .wrapper-left .Recommend a,
-  .information .name a {
-    color: black;
-  }
-
-  .Left .wrapper-left .FindFriends img {
-    height: 40px;
-    width: 40px;
-    margin-right: 10px;
-    border-radius: 50%;
-  }
-
-  .Left .wrapper-left .FindFriends {
-    display: flex;
-    margin-bottom: 12px;
-    align-items: center;
-  }
-
-  .FindFriends .someinfor {
-    font-size: 13px;
-    opacity: 0.7;
-
-  }
-
-  .FindFriends .information {
-    flex-grow: 1;
-  }
-
-  .Left .wrapper-left a {
-    text-decoration: none;
-  }
-
-  .DisplayNews {
-    display: none;
     color: white;
-    width: 100%;
-    height: 800px;
-    position: absolute;
+    font-size: 26px;
+    margin-left: 5px;
+  }
+
+  .Profile .post .wrapper-post .hover div {
+    display: flex;
     align-items: center;
+  }
+
+  .Profile .post .wrapper-post:hover .hover {
+    display: flex;
     justify-content: center;
-    background-color: #524c4c;
-    z-index: 1;
-  }
-
-  .DisplayNews.active {
-    display: flex;
-  }
-
-  .DisplayNews p {
-    margin: 0;
-  }
-
-  .DisplayNews .wrapper-news {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-  }
-
-  .DisplayNews .wrapper-news .infor img {
-    width: 20px;
-    height: 20px;
-  }
-
-  .DisplayNews .wrapper-news .infor .user {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-
-  .DisplayNews .wrapper-news .infor {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 10px 0;
   }
 
-  .DisplayNews .wrapper-news .infor .wrapper-infor {
+  .Profile .post .wrapper-row {
+    width: 90%;
     display: flex;
-    align-items: center;
-    margin: 0 0 0 10px;
+    justify-content: center;
   }
 
-  .DisplayNews .wrapper-news .story {
-    width: 400px;
-    height: auto;
+  .Profile .post .wrapper-row .row {
+    width: 80%;
   }
-  /* Upload */
-  .Upload {
-   background-color: #fff;
-   margin-bottom: 15px;
-   padding-top: 10px;
-  }
-  .Upload .second {
-    display: flex;
-    flex-direction: column;
-  }
-  .Upload .wrapper-upload {
-    margin-left: 15px;
-  }
-  .Upload .second input {
-    width: 100%;
-    height: 50px;
-    border:  none;
-    padding-left: 30px;
-    margin-bottom: 10px;
-  }
-  .Upload .second input:focus {
-    outline: none;
-  }
-  .Upload button {
-    width: 97%;
-    margin-bottom: 15px;
-  }
-
 </style>
 
 <body>
-
-  <div class="DisplayNews">
-    <div class="wrapper-news">
-      <div class="infor">
-        <div class="wrapper-infor">
-          <img class="user" src="https://cdn.hyperdev.com/click-me.svg?v=1477239469954" alt="img" />
-          <p>mn.png</p>
-        </div>
-        <a href="#">
-          <img class="delete"
-            src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fmore.png?v=1590153008167" alt="more" />
-        </a>
-      </div>
-      <a href="#">
-        <img class="story" src="https://cdn.hyperdev.com/click-me.svg?v=1477239469954" alt="img" />
-      </a>
-    </div>
-  </div>
-
-  <div class="Header">
+  <div class="Profile">
     <div class="container">
-      <div class="wrapper-header">
-        <a href="#">
-          <img src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fhi.png?v=1590147338026"
-            alt="instagram" />
-        </a>
-        <input type="text" placeholder="Search">
-        <div class="icon">
-          <a href="#">
-            <img src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fbrowser.png?v=1590147652762"
-              alt="home">
-          </a>
-          <a href="#">
-            <img src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fplane.png?v=1590148565871"
-              alt="home">
-          </a>
-          <a href="#">
-            <img src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fcompass.png?v=1590148518875"
-              alt="home">
-          </a>
-          <a href="#">
-            <img src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fheart.png?v=1590148496701"
-              alt="home">
-          </a>
-          <a href="#">
-            <img class="avatar"
-              src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/73244435_2997608627131456_2957342681333760000_n.jpg?_nc_cat=108&_nc_sid=85a577&_nc_ohc=5U53gYmzXVoAX-MOTT3&_nc_ht=scontent.fhan2-3.fna&oh=1755644c07fb47f26d8a70aad09046f4&oe=5EEEBDBC"
-              alt="home">
-          </a>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="Main">
-    <div class="wrapper-main">
-      <div class="Right">
-        <div class="Upload">
-          <div class="wrapper-upload">
-            <div class="first">
-              <h3>Create a new Post</h3>
-            </div>
-            <div class="second">
-              <img src="" alt="">
-              <input type="text" placeholder="What's up , bro ? ">
-              <input type="file">
-            </div>
-            <div>
-              <button class="btn btn-primary">Post</button>
-            </div>
-          </div>
-        </div>
-        <div class="new">
-
-          <div class="EachNews">
-            <a href="#">
-              <img class="img" src="https://cdn.hyperdev.com/click-me.svg?v=1477239469954" alt="news">
-            </a>
-
-            <p>hi</p>
-          </div>
-          <div class="EachNews">
-            <a href="#">
-              <img class="img" src="https://cdn.hyperdev.com/click-me.svg?v=1477239469954" alt="news">
-            </a>
-
-            <p>hi</p>
-          </div>
-          <div class="EachNews">
-            <a href="#">
-              <img class="img" src="https://cdn.hyperdev.com/click-me.svg?v=1477239469954" alt="news">
-            </a>
-
-            <p>hi</p>
-          </div>
-          <div class="EachNews">
-            <a href="#">
-              <img class="img" src="https://cdn.hyperdev.com/click-me.svg?v=1477239469954" alt="news">
-            </a>
-
-            <p>hi</p>
-          </div>
-          <div class="EachNews">
-            <a href="#">
-              <img class="img" src="https://cdn.hyperdev.com/click-me.svg?v=1477239469954" alt="news">
-            </a>
-
-            <p>hi</p>
-          </div>
-        </div>
-
-
-        <div class="Timeline">
-
-          <div class="person">
-            <div class="infor">
-              <a href="#">
-                <img
-                  src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/73244435_2997608627131456_2957342681333760000_n.jpg?_nc_cat=108&_nc_sid=85a577&_nc_ohc=5U53gYmzXVoAX-MOTT3&_nc_ht=scontent.fhan2-3.fna&oh=1755644c07fb47f26d8a70aad09046f4&oe=5EEEBDBC"
-                  alt="img">
-              </a>
-
-              <p>mn.png</p>
-            </div>
-            <a href="#">
-              <img class="more"
-                src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fmore.png?v=1590153008167" alt="more">
-            </a>
-          </div>
-          <img class="imgUpload"
-            src="https://instagram.fhan2-3.fna.fbcdn.net/v/t51.2885-15/e35/98274338_318501435800155_6640321408878702086_n.jpg?_nc_ht=instagram.fhan2-3.fna.fbcdn.net&_nc_cat=107&_nc_ohc=ISaDRsc6Z48AX8T4XC8&oh=c9dee2c223f0ec9cac11cc66fd11e86d&oe=5EF078DD"
-            alt="img">
-
-          <!-- Action -->
-          <div class="Action">
-            <div class="wrapper-icon">
-              <a href="#">
-                <img class="droTym" src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fheart.png?v=1590148496701"
-                  alt="tym">
-              </a>
-              <a href="">
-                <img src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fcomment.png?v=1590154634070"
-                  alt="comt">
-              </a>
-              <a href="">
-                <img src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fmail.png?v=1590154681531"
-                  alt="share">
-              </a>
-            </div>
-            <div class="ogikobiet">
-              <a href="">
-                <img src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fheart.png?v=1590148496701"
-                  alt="tym">
-              </a>
-            </div>
-          </div>
-          <!-- who liked -->
-          <div class="Wholike">
-            <img
-              src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/73244435_2997608627131456_2957342681333760000_n.jpg?_nc_cat=108&_nc_sid=85a577&_nc_ohc=5U53gYmzXVoAX-MOTT3&_nc_ht=scontent.fhan2-3.fna&oh=1755644c07fb47f26d8a70aad09046f4&oe=5EEEBDBC"
-              alt="wholike">
-            &nbsp;
-            <a href="#">
-              <b>t.linh222</b>
-            </a>
-            &nbsp;
-            <p>and</p>
-            &nbsp;
-            <a href="#">
-              <b>10 others people liked</b>
-            </a>
-
-          </div>
-
-          <div class="des">
-            <a href="#"><b>mn.png_ #copy</b></a>
-            <a href="#"> ... thêm</a>
-            <p>22 hours ago</p>
-            <div class="des-add">
-              anh cop day dm
-            </div>
-          </div>
-          
-          <div class="AddComment">
-            <input type="text" placeholder="Add Comment">
-            <a href="#">Post</a>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="Left">
-        <div class="wrapper-left">
-          <div class="me">
-            <img
-              src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/73244435_2997608627131456_2957342681333760000_n.jpg?_nc_cat=108&_nc_sid=85a577&_nc_ohc=5U53gYmzXVoAX-MOTT3&_nc_ht=scontent.fhan2-3.fna&oh=1755644c07fb47f26d8a70aad09046f4&oe=5EEEBDBC"
+      <div class="EditProfile">
+        <img class="avatar"
+          src="https://instagram.fhan2-1.fna.fbcdn.net/v/t51.2885-19/s320x320/72481773_538572816986102_3710814270154342400_n.jpg?_nc_ht=instagram.fhan2-1.fna.fbcdn.net&_nc_ohc=_eMb7uRe9YcAX_1rxLE&oh=5d44243ec8ace28acb449eb15cbf7cec&oe=5EFEB073"
+          alt="img">
+        <div class="wrapper-profile">
+          <div class="first">
+            <p class="name">phikhanhcr</p>
+            <a class="btn btn-light" href="#">Edit Profile</a>
+            <img src="https://cdn.glitch.com/4d1fcf2d-432d-48b9-9896-d4591b16fa4e%2Fsettings.png?v=1590919881874"
               alt="">
-            <div>
-              <a href="#"><b>phikhanhcr</b></a>
-              <p>Phi Khanh Cr</p>
-            </div>
-
           </div>
-          <div class="RecommendFriends">
-            <div class="Recommend">
-              <p>For you</p>
-              <a href="#">View all</a>
-            </div>
-            <div class="FindFriends">
-              <a href="#">
-                <img
-                  src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/73244435_2997608627131456_2957342681333760000_n.jpg?_nc_cat=108&_nc_sid=85a577&_nc_ohc=5U53gYmzXVoAX-MOTT3&_nc_ht=scontent.fhan2-3.fna&oh=1755644c07fb47f26d8a70aad09046f4&oe=5EEEBDBC"
-                  alt="someone">
-              </a>
-              <div class="information">
-                <div class="name">
-                  <a href="#"><b>
-                      paulwalker
-                    </b></a>
+          <div class="second">
+            <p>6 Posts</p>
+            <p>27.2M followers</p>
+            <p>29 following</p>
+          </div>
+          <div class="first">
+            <b>Phi Khanh Cr</b>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper-row">
+        <div class="row">
+          <div class="col-lg-4  col-12 post">
+            <div class="wrapper-post">
+              <div class="hover">
+                <div>
+                  <img src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fheart.png?v=1590148496701"
+                    alt="">
+                  <p>1</p>
+                  <img src="https://cdn.glitch.com/6ccfbc6a-9aaf-46cd-b82e-57abff9221b0%2Fheart.png?v=1590148496701"
+                    alt="">
+                  <p>1</p>
                 </div>
-                <div class="someinfor">Instagram recommend
-                </div>
-              </div>
-              <div class="follow">
-                <a href="#">Follow</a>
-              </div>
-            </div>
-
-            <div class="FindFriends">
-              <a href="#">
-                <img
-                  src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/73244435_2997608627131456_2957342681333760000_n.jpg?_nc_cat=108&_nc_sid=85a577&_nc_ohc=5U53gYmzXVoAX-MOTT3&_nc_ht=scontent.fhan2-3.fna&oh=1755644c07fb47f26d8a70aad09046f4&oe=5EEEBDBC"
-                  alt="someone">
-              </a>
-              <div class="information">
-                <div class="name">
-                  <a href="#"><b>
-                      paulwalker
-                    </b></a>
-                </div>
-                <div class="someinfor">Instagram recommend
-                </div>
-              </div>
-              <div class="follow">
-                <a href="#">Follow</a>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
